@@ -916,10 +916,10 @@ footer {
       </p>
 
       <div class="contact-links">
-        <a class="contact-link" href="mailto:alex@zerone.dev">
+        <a class="contact-link" href="mailto:alex@AI&DS.dev">
           <div class="contact-link-icon">📧</div>
           <div>
-            <div class="contact-link-text">alex@zerone.dev</div>
+            <div class="contact-link-text">alex@AI&DS.dev</div>
             <div class="contact-link-sub">Email · Usually replies in 24h</div>
           </div>
         </a>
@@ -1225,7 +1225,7 @@ function closeModal() {
 }
 
 /* ─────────────── LOCAL STORAGE — FORM DRAFT ─────────────── */
-const DRAFT_KEY = 'zerone_draft';
+const DRAFT_KEY = 'AI&DS_draft';
 const fields = ['fname','lname','email','subject','message'];
 
 function saveDraft() {
@@ -1305,9 +1305,9 @@ function submitForm() {
       message: document.getElementById('message').value,
       sentAt: new Date().toISOString()
     };
-    const prev = JSON.parse(localStorage.getItem('zerone_submissions') || '[]');
+    const prev = JSON.parse(localStorage.getItem('AI&DS_submissions') || '[]');
     prev.push(submission);
-    localStorage.setItem('zerone_submissions', JSON.stringify(prev));
+    localStorage.setItem('AI&DS_submissions', JSON.stringify(prev));
 
     /* Clear draft */
     localStorage.removeItem(DRAFT_KEY);
@@ -1358,7 +1358,7 @@ logoEl.onerror = () => {
 
 /* ─────────────── THEME PERSISTENCE ─────────────── */
 /* (dark theme is default — future-proof slot for theme toggle) */
-const savedTheme = localStorage.getItem('zerone_theme') || 'dark';
+const savedTheme = localStorage.getItem('AI&DS_theme') || 'dark';
 document.documentElement.dataset.theme = savedTheme;
 </script>
 </body>
